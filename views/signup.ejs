@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("partials/head") %>
+    <link href="../stylesheets/signup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header><%- include ("partials/nav") %></header>
+    <main>
+      <div class="signup">
+        <h1>Sign Up</h1>
+        <form
+          action="/auth/signup"
+          style="border: 1px solid #ccc"
+          method="post"
+        >
+          <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              name="username"
+              required
+            />
+            <label for="email"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              name="email"
+              required
+            />
+
+            <label for="password"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              name="password"
+              required
+            />
+            <%- include ("partials/message") %>
+            <div class="clearfix">
+              <button type="submit">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

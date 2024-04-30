@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include ("partials/head") %>
+    <link href="../stylesheets/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header><%- include ("partials/nav") %></header>
+    <main>
+      <div class="login">
+        <h1>Login</h1>
+        <%- include ("partials/message") %>
+        <div>
+          <a class="btn btn-lg google" href="/auth/google"
+            ><img
+              src="https://img.icons8.com/color/16/000000/google-logo.png"
+            />
+            Google Login</a
+          >
+        </div>
+        <hr />
+        <form action="/auth/login" method="post">
+          <div class="container">
+            <!-- <p>Please login with your email.</p> -->
+            <label for="email"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              name="username"
+              required
+            />
+
+            <label for="password"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              name="password"
+              required
+            />
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
