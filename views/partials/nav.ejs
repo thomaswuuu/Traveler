@@ -23,6 +23,49 @@
             <a class="nav-link" href="/">首頁</a>
           </button>
         </li>
+        <% if(!user) { %>
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn kkbox"
+            data-bs-dismiss="collapse"
+            data-type="login"
+          >
+            <a class="nav-link" href="/auth/login">會員登入</a>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn spotify"
+            data-bs-dismiss="collapse"
+            data-type="register"
+          >
+            <a class="nav-link" href="/auth/signup">註冊會員</a>
+          </button>
+        </li>
+        <% } %> <% if(user) { %>
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn spotify"
+            data-bs-dismiss="collapse"
+            data-type="profile"
+          >
+            <a class="nav-link" href="/profile">個人資訊</a>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn spotify"
+            data-bs-dismiss="collapse"
+            data-type="logout"
+          >
+            <a class="nav-link" href="/auth/logout">登出系統</a>
+          </button>
+        </li>
+        <% } %>
         <li class="nav-item">
           <form class="d-flex" action="/">
             <input

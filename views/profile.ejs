@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("partials/head") %>
+    <link href="../stylesheets/profile.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header><%- include ("partials/nav") %></header>
+    <main>
+      <div class="user">
+        <% if(user.thumbnail) { %>
+        <img class="user-image" src="<%= user.thumbnail %>" alt="userhead" />
+        <% } else { %>
+        <img class="user-image" src="../images/user-solid.svg" alt="userhead" />
+        <% } %>
+        <div class="user-info">
+          <h3>使用者：<%= user.username %></h3>
+          <h4>電子信箱：<%= user.email %></h4>
+        </div>
+      </div>
+      <hr />
+      <div class="profile"></div>
+    </main>
+  </body>
+</html>

@@ -32,6 +32,8 @@ const attrationsInfo = async (req, res) => {
     } else {
       attractions = await Attraction.findAll();
     }
+    // Get user info
+    const user = req.user;
     // Get catories
     const categories = await Category.findAll({
       where: {
@@ -48,7 +50,7 @@ const attrationsInfo = async (req, res) => {
       };
     });
 
-    res.render("index", { attractions, categoryDetails });
+    res.render("index", { user, attractions, categoryDetails });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -64,7 +66,8 @@ const attrationsDetail = async (req, res) => {
           attractionId,
         },
       });
-
+      // Get user info
+      const user = req.user;
       // Get catories
       const categories = await Category.findAll({
         where: {
@@ -80,7 +83,7 @@ const attrationsDetail = async (req, res) => {
           name: category.name,
         };
       });
-      res.render("details", { categoryDetails, attractionDetails });
+      res.render("details", { user, categoryDetails, attractionDetails });
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
