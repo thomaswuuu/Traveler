@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="category">
+    <a class="nav-link" href="./?id=0">
+      <button
+        type="button"
+        class="btn"
+        data-bs-dismiss="collapse"
+        data-type="home"
+      >
+        全部
+      </button>
+    </a>
+    <% categoryDetails.forEach(detail => { %>
+    <a class="nav-link" href="./?id=<%= detail.id %>">
+      <button
+        type="button"
+        class="btn"
+        data-bs-dismiss="collapse"
+        data-type="home"
+      >
+        <%= detail.name %>
+      </button>
+    </a>
+    <% }); %>
+  </div>
+</nav>

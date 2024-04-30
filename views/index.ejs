@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("partials/head") %>
+  </head>
+  <body>
+    <header><%- include ("partials/nav") %></header>
+    <main>
+      <div><%- include ("partials/nav2") %></div>
+      <div class="total">Total: <%= attractions.length %></div>
+      <div class="attractions">
+        <% attractions.forEach((attraction)=>{ %>
+        <a href="/details?id=<%= attraction.attractionId %>">
+          <div>
+            <% if(attraction.images.length == 0){ %>
+            <img src="images/nodata.png" alt="No Data" />
+            <% } else { %>
+            <img src="<%= attraction.images[0] %>" alt="attraction" />
+            <% } %>
+            <h5><%= attraction.name %></h5>
+          </div>
+        </a>
+        <% });%>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("partials/head") %>
+  </head>
+  <body>
+    <header><%- include ("partials/nav") %></header>
+    <main>
+      <div><%- include ("partials/nav2") %></div>
+      <div style="width: 1024px; margin: auto">
+        <% attractionDetails.forEach(attraction =>{ %>
+        <br />
+        <h2>景點名稱：<%= attraction.name %></h2>
+        <br />
+        <h4 style="width: 1000px">景點介紹：<%- attraction.introduction %></h4>
+        <br />
+        <h4>景點區域：<%= attraction.zipcode %> <%= attraction.distric %></h4>
+        <br />
+        <h4>景點地址：<%= attraction.address %></h4>
+        <br />
+        <h4>景點電話：<%= attraction.tel %></h4>
+        <br />
+        <% attraction.images.forEach(image=>{ %>
+        <img
+          src="<%= image %>"
+          style="margin: 5px 0px; width: 250px; height: 200px"
+        />
+        <%})%> <%})%>
+      </div>
+    </main>
+  </body>
+</html>

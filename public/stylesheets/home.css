@@ -1,0 +1,101 @@
+body {
+  font-family: sans-serif, Helvetica, Arial, "微軟正黑體";
+  background-color: #fffbfb;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px 1px #cac6c6;
+  z-index: 1;
+}
+main {
+  margin-top: 5rem;
+}
+h2,
+h3,
+h4 {
+  width: 100%;
+}
+
+.logo {
+  font-style: oblique;
+  font-size: 25px;
+  margin: 0 auto;
+  color: #3f423e;
+}
+.logo img {
+  width: 27px;
+  margin: 0 5px;
+}
+header .btn {
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  color: #3f423e;
+  margin: 0 0.5rem;
+  padding: 0 5px;
+}
+header .nav-item {
+  margin: 2px 10px;
+}
+.form-control {
+  font-size: 18px;
+}
+.d-flex .btn {
+  max-width: 100px;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.category .btn {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  color: #3f423e;
+  margin: 0 0.1rem;
+}
+.total {
+  font-size: 18px;
+  padding: 0.5rem 3rem;
+}
+.attractions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.attractions div {
+  margin: 10px 5px;
+  width: 250px;
+  height: 250px;
+  border: #cac6c6 1px solid;
+}
+.attractions div:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #454242;
+}
+.attractions a {
+  color: #3f423e;
+  text-decoration: none;
+}
+.attractions div img {
+  width: 100%;
+  height: 200px;
+  border: olivedrab 1px solid;
+}
+.attractions div h5 {
+  text-align: center;
+}
+.attrDetail img {
+  width: 20px;
+}
